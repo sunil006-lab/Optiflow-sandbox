@@ -1,0 +1,81 @@
+1. what all the modules available in kubernetes API server ? if it is more, than give me count of it? 
+Ans:
+-----
+
+The Kubernetes API server (kube-apiserver) is the central control plane component that exposes the Kubernetes API. Internally, it's composed of multiple modules (handlers, admission plugins, API groups, and other sub-components) to manage, validate, mutate, and route requests.
+
+
+Core Modules in Kubernetes API Server:
+-------------------------------------------------------
+Let’s break them down into logical categories.
+
+
+1. API Groups & Resources:
+------------------------------------
+These are logically grouped modules handling different parts of Kubernetes functionality:
+
+| API Group                                                                                 |                Description               |
+| -------------------------------------------------------------------   | ----------------------------------------- |
+| `core` (`/api/v1`)                                                                | Pods, Services, ConfigMaps, Secrets, etc. |
+| `apps`                                                                                   | Deployments, StatefulSets, DaemonSets     |
+| `batch`                                                                                  | Jobs and CronJobs                         |
+| `autoscaling`                                                                        | Horizontal Pod Autoscaler                 |
+| `rbac.authorization.k8s.io`                                               | Roles, RoleBindings, etc.                 |
+| `apiextensions.k8s.io`                                                        | Custom Resource Definitions (CRDs)        |
+| `admissionregistration.k8s.io`                                          | Validating & Mutating Webhooks            |
+| `apiregistration.k8s.io`                                                       | API aggregation layer                     |
+| `authentication.k8s.io`                                                       | TokenReview, User authentication          |
+| `authorization.k8s.io`                                                         | SubjectAccessReview                       |
+| `policy`                                                                                   | PodSecurityPolicy (deprecated in 1.25)    |
+| `scheduling.k8s.io`                                                               | PriorityClasses                           |
+| `storage.k8s.io`                                                                     | StorageClasses, CSIDrivers                |
+| `networking.k8s.io`                                                              | Ingress, NetworkPolicies                  |
+| `certificates.k8s.io`                                                               | CertificateSigningRequests                |
+| `node.k8s.io`                                                                         | RuntimeClass, etc.                        |
+| `events.k8s.io`                                                                       | Events API                                |
+| `coordination.k8s.io`                                                           | Leases (used for leader election)         |
+| `discovery.k8s.io`                                                                 | EndpointSlices                            |
+| `flowcontrol.apiserver.k8s.io`                                           | API Priority and Fairness                 |
+
+
+Total API Groups: ~20 (some versioned internally like v1, v1beta1, etc.)
+
+
+2. Admission Controllers (Plugins)
+Admission controllers are modules that intercept requests before persistence.
+
+Common ones:
+1. NamespaceLifecycle
+2. LimitRanger
+3. ServiceAccount
+4. NodeRestriction
+5. ResourceQuota
+6. ValidatingAdmissionWebhook
+7. MutatingAdmissionWebhook
+8. PodSecurity
+9. TaintNodesByCondition
+10. DefaultStorageClass
+……………...Many more
+
+Total Admission Plugins: ~30+ (you can list with kube-apiserver --help or check official list) -- https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/
+
+3. Other Internal Modules
+-- Authentication module: handles tokens, client certs, service accounts
+-- Authorization module: RBAC, ABAC, Webhook
+-- ETCD client: handles persistence layer
+-- Request Routing: Handles RESTful HTTP interface
+-- OpenAPI / Swagger schema management
+
+
+4. Summary Count:
+---------------------------
+
+| Category               | Approximate Count |
+| ---------------------- | ----------------- |
+| API Groups             | 20                |
+| Admission Controllers  | 30+               |
+| Other Internal Modules | 10+               |
+
+
+Here 2 screen shots I provided please refer without missing.
+

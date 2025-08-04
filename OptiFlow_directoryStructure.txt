@@ -1,0 +1,191 @@
+Folder PATH listing for volume Local Disk
+Volume serial number is BAC0-2CBF
+E:.
+|   api_gateway.log
+|   create_table.py
+|   dire_struct.txt
+|   drop_table.py
+|   OptiFlow_VS_project.py
+|   OptiFlow_VS_project.pyproj
+|   OptiFlow_VS_project.sln
+|   orchestrator.db
+|   orchestrator.zip
+|   proposal submission link.txt
+|   run_project.bat
+|   testtable.py
+|   
++---agents
+|   +---ai_models
+|   +---medical_ai
+|   +---predictive_analytics
+|   +---supply_chain_ai
+|   +---utils
+|   \---versioning
++---api_gateway
+|   |   api_gateway_entry.py
+|   |   consumer-test.py
+|   |   server_config.env
+|   |   __init__.py
+|   |   
+|   +---.ipynb_checkpoints
+|   |       api_gateway_entry-checkpoint.ipynb
+|   |       
+|   +---models
+|   |       best_payment_order_model.pth
+|   |       payment_order_model_main.py
+|   |       requirements.txt
+|   |       
+|   +---routers
+|   |   |   api_gateway_router.py
+|   |   |   
+|   |   \---__pycache__
+|   |           
+|   +---services
+|   |   |   apigw_services.py
+|   |   |   auth_middleware.py
+|   |   |   
+|   |   \---__pycache__
+|   |           
+|   +---utils
+|   \---__pycache__
+|           
++---config
+|   \---env
+|       \---secrets
+|           +---dev
+|           +---prod
+|           \---stage
++---docs
++---etcd-v3.5.13-linux-amd64
+|   |   etcdutl
+|   |   get_all.sh
+|   |   populate_etcd.sh
+|   |   README-etcdctl.md
+|   |   README-etcdutl.md
+|   |   README.md
+|   |   READMEv2-etcdctl.md
+|   |   
+|   \---Documentation
+|       |   README.md
+|       |   
+|       \---dev-guide
+|           \---apispec
+|               \---swagger
+|                       rpc.swagger.json
+|                       v3election.swagger.json
+|                       v3lock.swagger.json
+|                       
++---frontend
+|   |   app.py
+|   |   NewFile
+|   |   
+|   +---components
+|   +---static
+|   |       script.js
+|   |       style.css
+|   |       
+|   \---templates
+|           index.html
+|           
++---load_balancer
+|   +---algorithms
+|   \---utils
++---logs
+|   +---alerts
+|   +---elk_stack
+|   \---prometheus_grafana
++---networking
+|   +---gateway
+|   +---load_balancer
+|   \---service_discovery
++---orchestrator
+|   |   init_db.py
+|   |   
+|   +---apiserver
+|   |   |   developer_api.py
+|   |   |   developer_api_v01.py
+|   |   |   
+|   |   \---__pycache__
+|   |           
+|   +---caliconetwork
+|   |       calicoctl
+|   |       calico_setup.py
+|   |       
+|   +---controller
+|   |   |   controller.py
+|   |   |   controller_bkup.py
+|   |   |   controller_bkup_01.py
+|   |   |   
+|   |   \---__pycache__
+|   |           
+|   +---core
+|   |   |   containerd_wrapper.py
+|   |   |   container_client.py
+|   |   |   container_interface.py
+|   |   |   container_main.py
+|   |   |   container_test.py
+|   |   |   
+|   |   \---__pycache__
+|   |           
+|   +---db
+|   |   |   database_query.py
+|   |   |   init_db.py
+|   |   |   query_db_node_notrequired.py
+|   |   |   schema_model_notrequired.py
+|   |   |   __init__.py
+|   |   |   
+|   |   \---__pycache__
+|   |           
+|   +---models
+|   |   |   core_models.py
+|   |   |   models.py
+|   |   |   models_bkup_notrequired.py
+|   |   |   support_models.py
+|   |   |   testtable.py
+|   |   |   
+|   |   \---__pycache__
+|   |           
+|   +---registry
+|   |       service_registry.py
+|   |       
+|   +---scheduler
+|   |       oschedular.py
+|   |       
+|   +---schema_model
+|   |   |   base.py
+|   |   |   events.py
+|   |   |   mpods.py
+|   |   |   node.py
+|   |   |   workloads.py
+|   |   |   __init__.py
+|   |   |   
+|   |   \---__pycache__
+|   |           
+|   +---utils
+|   \---__pycache__
+|           
++---scripts
++---storage
+|   +---postgres
+|   +---redis
+|   +---sqlite
+|   \---test_data
++---tests
+|   |   __init__.py
+|   |   
+|   +---.ipynb_checkpoints
+|   +---agents_tests
+|   +---api_tests
+|   |   |   testapigw.py
+|   |   |   test_api_gateway.ipynb
+|   |   |   __init__.py
+|   |   |   
+|   |   \---.ipynb_checkpoints
+|   |           test_api_gateway-checkpoint.ipynb
+|   |           
+|   +---frontend_tests
+|   +---load_tests
+|   +---orchestrator_tests
+|   \---test_data
+\---__pycache__
+        
