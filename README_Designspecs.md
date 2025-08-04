@@ -14,6 +14,7 @@ OptiFlow (AI-OrchestrateX) is a lightweight, modular, and AI-augmented domain or
 - 🔒 Secure etcd/SQLite3/Redis storage layers
 - 🌐 Built-in API Gateway and Load Balancer
 - 🧩 Plug-and-play architecture
+- 🧠 OptiFlow project source code is available in - https://github.com/sunil006-lab/airrepo-flannel-working.git (branch- feature/optiflow-module)
 
 ## Architecture
 
